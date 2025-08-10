@@ -20,18 +20,9 @@ De las tablas anteriores se descartaron las siguientes por no proporcionar infor
 - zzVersion
   - No es claro al ver la informacion contenida en esta tabla, que tipo de version se esta almacenando. Ademas no existe ningun vinculo con el resto de la informacion
 
-===
-
 ## Analisis dimensional
 
-A continacion se encuentra el desarrollo del analisis dimensional para la creacion del data warehouse para el analisis de
-
-Proceso para desarrollar el disenio dimensional
-
-1. Proceso de negocio
-2. Seleccion de granularidad
-3. Definicion de dimensiones
-4. Definicion de metricas
+A continacion se encuentra el desarrollo del analisis dimensional para la creacion del data warehouse para el analisis de de los datos
 
 ### 1 PROCESO DE NEGOCIO
 
