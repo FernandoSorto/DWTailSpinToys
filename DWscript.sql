@@ -63,17 +63,24 @@ CREATE TABLE DimEstado
 )
 GO
 
+-- Creacion de DimPromocion
+CREATE TABLE DimPromocion(
+	PromocionKey 	INT PRIMARY KEY IDENTITY(1,1),
+	CodigoPromocion	NVARCHAR(30) NOT NULL,
+)
+
 -- Creacion de FactVentas
 CREATE TABLE FactVentas
 (
-	EstadoKey 		INT NOT NULL FOREIGN KEY REFERENCES DimEstado(EstadoKey),
-	ProductoKey 	INT NOT NULL FOREIGN KEY REFERENCES DimProducto(ProductoKey),
-	FechaOrdenKey 	INT NOT NULL FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
-	FechaEnvioKey 	INT NOT NULL FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
-	Cantidad 		INT NOT NULL,
-	PrecioUnitario 	FLOAT NOT NULL,
-	Descuento 		FLOAT NOT NULL,
-	NumeroOrden 	VARCHAR(20) NOT NULL,
-	CodigoPromocion VARCHAR(20) NOT NULL,
+	EstadoClienteKey 		INT NOT NULL FOREIGN KEY REFERENCES DimEstado(EstadoKey),
+	ProductoKey 			INT NOT NULL FOREIGN KEY REFERENCES DimProducto(ProductoKey),
+	FechaOrdenKey 			INT NOT NULL FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
+	FechaEnvioKey 			INT NOT NULL FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
+	PromocionKey 			INT NOT NULL FOREIGN KEY REFERENCES DimPromocion(PromocionKey),
+	Cantidad 				INT NOT NULL,
+	PrecioUnitario 			FLOAT NOT NULL,
+	Descuento 				FLOAT NOT NULL,
+	TotalLinea				FLOAT NOT NULL,
+	NumeroOrden 			VARCHAR(20) NOT NULL,
 )
 GO
