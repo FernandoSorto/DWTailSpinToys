@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{167C4114-D0EC-416D-AA27-28EF2BC43908}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{51DD0280-B16D-4961-B309-D63F1DAF59E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -64,13 +64,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Cargar FactVentas"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{5140C9EC-B244-4183-9A28-281530284E8D}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Cargar FactVentas"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -78,7 +78,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Cargar FactVentas"
+              refId="Package\Cargar FactVentas\Cargar FactVentas"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
@@ -113,7 +113,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Cargar FactVentas.Connections[IDbConnection]"
+                  refId="Package\Cargar FactVentas\Cargar FactVentas.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys]"
                   connectionManagerRefId="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys]"
                   description="Managed connection manager"
@@ -121,119 +121,119 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input]"
+                  refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="ADO NET Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[ProductoKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[ProductoKey]"
                       cachedDataType="i4"
                       cachedName="ProductoKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[ProductoKey]"
-                      lineageId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[ProductoKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[PromocionKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[PromocionKey]"
                       cachedDataType="i4"
                       cachedName="PromocionKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[PromocionKey]"
-                      lineageId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Match Output].Columns[PromocionKey]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[PromocionKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Match Output].Columns[PromocionKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[CustomerStateID]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[CustomerStateID]"
                       cachedDataType="i4"
                       cachedName="CustomerStateID"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[EstadoClienteKey]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[CustomerStateID]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[EstadoClienteKey]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[CustomerStateID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[TiempoOrdenKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[TiempoOrdenKey]"
                       cachedDataType="i4"
                       cachedName="TiempoOrdenKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[FechaOrdenKey]"
-                      lineageId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Match Output].Columns[TiempoOrdenKey]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[FechaOrdenKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Match Output].Columns[TiempoOrdenKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[TiempoEnvioKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[TiempoEnvioKey]"
                       cachedDataType="i4"
                       cachedName="TiempoEnvioKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvioKey]"
-                      lineageId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Match Output].Columns[TiempoEnvioKey]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvioKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Match Output].Columns[TiempoEnvioKey]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[Quantity]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[Quantity]"
                       cachedDataType="i4"
                       cachedName="Quantity"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[Cantidad]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Quantity]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[Cantidad]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Quantity]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[UnitPrice]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[UnitPrice]"
                       cachedDataType="numeric"
                       cachedName="UnitPrice"
                       cachedPrecision="9"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[PrecioUnitario]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[UnitPrice]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[PrecioUnitario]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[UnitPrice]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[Total]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[Total]"
                       cachedDataType="numeric"
                       cachedName="Total"
                       cachedPrecision="20"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[TotalLinea]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Total]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[TotalLinea]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Total]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[OrderNumber]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[OrderNumber]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="OrderNumber"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[NumeroOrden]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderNumber]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[NumeroOrden]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderNumber]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[DiscountAmount]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].Columns[DiscountAmount]"
                       cachedDataType="numeric"
                       cachedName="DiscountAmount"
                       cachedPrecision="9"
                       cachedScale="2"
-                      externalMetadataColumnId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[Descuento]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[DiscountAmount]" />
+                      externalMetadataColumnId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[Descuento]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[DiscountAmount]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[EstadoClienteKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[EstadoClienteKey]"
                       dataType="i4"
                       name="EstadoClienteKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[ProductoKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[ProductoKey]"
                       dataType="i4"
                       name="ProductoKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[FechaOrdenKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[FechaOrdenKey]"
                       dataType="i4"
                       name="FechaOrdenKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvioKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[FechaEnvioKey]"
                       dataType="i4"
                       name="FechaEnvioKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[PromocionKey]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[PromocionKey]"
                       dataType="i4"
                       name="PromocionKey" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[Cantidad]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[Cantidad]"
                       dataType="i4"
                       name="Cantidad" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[PrecioUnitario]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[PrecioUnitario]"
                       dataType="r8"
                       name="PrecioUnitario" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[Descuento]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[Descuento]"
                       dataType="r8"
                       name="Descuento" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[TotalLinea]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[TotalLinea]"
                       dataType="r8"
                       name="TotalLinea" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[NumeroOrden]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input].ExternalColumns[NumeroOrden]"
                       dataType="wstr"
                       length="20"
                       name="NumeroOrden" />
@@ -242,22 +242,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Cargar FactVentas.Outputs[ADO NET Destination Error Output]"
+                  refId="Package\Cargar FactVentas\Cargar FactVentas.Outputs[ADO NET Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="ADO NET Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Cargar FactVentas.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar FactVentas\Cargar FactVentas.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Cargar FactVentas.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar FactVentas\Cargar FactVentas.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Cargar FactVentas.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar FactVentas\Cargar FactVentas.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -266,7 +266,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Leer FactVentas"
+              refId="Package\Cargar FactVentas\Leer FactVentas"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
@@ -316,7 +316,7 @@ FROM Sales s</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Leer FactVentas.Connections[IDbConnection]"
+                  refId="Package\Cargar FactVentas\Leer FactVentas.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LUFESO.TailspinToys2020-US]"
                   connectionManagerRefId="Package.ConnectionManagers[LUFESO.TailspinToys2020-US]"
                   description="Managed connection manager"
@@ -324,233 +324,233 @@ FROM Sales s</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output]"
+                  refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output]"
                   name="ADO NET Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[CustomerStateID]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[CustomerStateID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[CustomerStateID]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[CustomerStateID]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[CustomerStateID]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[CustomerStateID]"
                       name="CustomerStateID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ProductID]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ProductID]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[ProductID]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ProductID]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[ProductID]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ProductID]"
                       name="ProductID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderDate]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[OrderDate]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderDate]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[OrderDate]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderDate]"
                       name="OrderDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ShipDate]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ShipDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[ShipDate]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ShipDate]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[ShipDate]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ShipDate]"
                       name="ShipDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[promo]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[promo]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[promo]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[promo]"
                       length="20"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[promo]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[promo]"
                       name="promo"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[DiscountAmount]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[DiscountAmount]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[DiscountAmount]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[DiscountAmount]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[DiscountAmount]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[DiscountAmount]"
                       name="DiscountAmount"
                       precision="9"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Quantity]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Quantity]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[Quantity]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Quantity]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[Quantity]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Quantity]"
                       name="Quantity"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[UnitPrice]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[UnitPrice]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[UnitPrice]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[UnitPrice]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[UnitPrice]"
                       name="UnitPrice"
                       precision="9"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Total]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Total]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[Total]"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Total]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[Total]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[Total]"
                       name="Total"
                       precision="20"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderNumber]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderNumber]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[OrderNumber]"
+                      externalMetadataColumnId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[OrderNumber]"
                       length="10"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderNumber]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderNumber]"
                       name="OrderNumber"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[CustomerStateID]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[CustomerStateID]"
                       dataType="i4"
                       name="CustomerStateID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[ProductID]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[ProductID]"
                       dataType="i4"
                       name="ProductID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[OrderDate]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[OrderDate]"
                       dataType="dbTimeStamp"
                       name="OrderDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[ShipDate]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[ShipDate]"
                       dataType="dbTimeStamp"
                       name="ShipDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[promo]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[promo]"
                       dataType="wstr"
                       length="20"
                       name="promo" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[DiscountAmount]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[DiscountAmount]"
                       dataType="numeric"
                       name="DiscountAmount"
                       precision="9"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[Quantity]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[Quantity]"
                       dataType="i4"
                       name="Quantity" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[UnitPrice]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[UnitPrice]"
                       dataType="numeric"
                       name="UnitPrice"
                       precision="9"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[Total]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[Total]"
                       dataType="numeric"
                       name="Total"
                       precision="20"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[OrderNumber]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].ExternalColumns[OrderNumber]"
                       dataType="wstr"
                       length="10"
                       name="OrderNumber" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output]"
+                  refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output]"
                   isErrorOut="true"
                   name="ADO NET Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[CustomerStateID]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[CustomerStateID]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[CustomerStateID]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[CustomerStateID]"
                       name="CustomerStateID" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ProductID]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ProductID]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ProductID]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ProductID]"
                       name="ProductID" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[OrderDate]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[OrderDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[OrderDate]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[OrderDate]"
                       name="OrderDate" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ShipDate]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ShipDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ShipDate]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ShipDate]"
                       name="ShipDate" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[promo]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[promo]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[promo]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[promo]"
                       name="promo" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[DiscountAmount]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[DiscountAmount]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[DiscountAmount]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[DiscountAmount]"
                       name="DiscountAmount"
                       precision="9"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[Quantity]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[Quantity]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[Quantity]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[Quantity]"
                       name="Quantity" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[UnitPrice]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[UnitPrice]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[UnitPrice]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[UnitPrice]"
                       name="UnitPrice"
                       precision="9"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[Total]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[Total]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[Total]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[Total]"
                       name="Total"
                       precision="20"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[OrderNumber]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[OrderNumber]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[OrderNumber]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[OrderNumber]"
                       name="OrderNumber" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -559,7 +559,7 @@ FROM Sales s</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup Estado"
+              refId="Package\Cargar FactVentas\Lookup Estado"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -615,7 +615,7 @@ where [refTable].[EstadoID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\52:invalid};</property>
+                  name="ParameterMap">#{Package\Cargar FactVentas\206:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -627,7 +627,7 @@ where [refTable].[EstadoID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup Estado.Connections[OleDbConnection]"
+                  refId="Package\Cargar FactVentas\Lookup Estado.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   connectionManagerRefId="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   description="Connection manager used to access lookup data."
@@ -635,14 +635,14 @@ where [refTable].[EstadoID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup Estado.Inputs[Lookup Input]"
+                  refId="Package\Cargar FactVentas\Lookup Estado.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup Estado.Inputs[Lookup Input].Columns[CustomerStateID]"
+                      refId="Package\Cargar FactVentas\Lookup Estado.Inputs[Lookup Input].Columns[CustomerStateID]"
                       cachedDataType="i4"
                       cachedName="CustomerStateID"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[CustomerStateID]">
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[CustomerStateID]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -660,18 +660,18 @@ where [refTable].[EstadoID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Estado.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Estado.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Match Output].Columns[EstadoKey]"
+                      refId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Match Output].Columns[EstadoKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Match Output].Columns[EstadoKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Match Output].Columns[EstadoKey]"
                       name="EstadoKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -685,30 +685,30 @@ where [refTable].[EstadoID] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup No Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Estado.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Estado.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Error Output]"
+                  refId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Estado.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Estado.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -717,7 +717,7 @@ where [refTable].[EstadoID] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup FechaEnvio"
+              refId="Package\Cargar FactVentas\Lookup FechaEnvio"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -773,7 +773,7 @@ where [refTable].[Fecha] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\200:invalid};</property>
+                  name="ParameterMap">#{Package\Cargar FactVentas\207:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -785,7 +785,7 @@ where [refTable].[Fecha] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup FechaEnvio.Connections[OleDbConnection]"
+                  refId="Package\Cargar FactVentas\Lookup FechaEnvio.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   connectionManagerRefId="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   description="Connection manager used to access lookup data."
@@ -793,14 +793,14 @@ where [refTable].[Fecha] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup FechaEnvio.Inputs[Lookup Input]"
+                  refId="Package\Cargar FactVentas\Lookup FechaEnvio.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup FechaEnvio.Inputs[Lookup Input].Columns[ShipDate]"
+                      refId="Package\Cargar FactVentas\Lookup FechaEnvio.Inputs[Lookup Input].Columns[ShipDate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="ShipDate"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ShipDate]">
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ShipDate]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -818,18 +818,18 @@ where [refTable].[Fecha] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup FechaEnvio.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup FechaEnvio.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Match Output].Columns[TiempoEnvioKey]"
+                      refId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Match Output].Columns[TiempoEnvioKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Match Output].Columns[TiempoEnvioKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Match Output].Columns[TiempoEnvioKey]"
                       name="TiempoEnvioKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -843,30 +843,30 @@ where [refTable].[Fecha] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup No Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup FechaEnvio.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup FechaEnvio.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Error Output]"
+                  refId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup FechaEnvio.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup FechaEnvio.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -875,7 +875,7 @@ where [refTable].[Fecha] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup FechaOrden"
+              refId="Package\Cargar FactVentas\Lookup FechaOrden"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -931,7 +931,7 @@ where [refTable].[Fecha] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\197:invalid};</property>
+                  name="ParameterMap">#{Package\Cargar FactVentas\208:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -943,7 +943,7 @@ where [refTable].[Fecha] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup FechaOrden.Connections[OleDbConnection]"
+                  refId="Package\Cargar FactVentas\Lookup FechaOrden.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   connectionManagerRefId="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   description="Connection manager used to access lookup data."
@@ -951,14 +951,14 @@ where [refTable].[Fecha] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup FechaOrden.Inputs[Lookup Input]"
+                  refId="Package\Cargar FactVentas\Lookup FechaOrden.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup FechaOrden.Inputs[Lookup Input].Columns[OrderDate]"
+                      refId="Package\Cargar FactVentas\Lookup FechaOrden.Inputs[Lookup Input].Columns[OrderDate]"
                       cachedDataType="dbTimeStamp"
                       cachedName="OrderDate"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderDate]">
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[OrderDate]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -976,18 +976,18 @@ where [refTable].[Fecha] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup FechaOrden.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup FechaOrden.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Match Output].Columns[TiempoOrdenKey]"
+                      refId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Match Output].Columns[TiempoOrdenKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Match Output].Columns[TiempoOrdenKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Match Output].Columns[TiempoOrdenKey]"
                       name="TiempoOrdenKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1001,30 +1001,30 @@ where [refTable].[Fecha] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup No Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup FechaOrden.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup FechaOrden.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Error Output]"
+                  refId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup FechaOrden.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup FechaOrden.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1033,7 +1033,7 @@ where [refTable].[Fecha] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup Producto"
+              refId="Package\Cargar FactVentas\Lookup Producto"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -1089,7 +1089,7 @@ where [refTable].[ProductoID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\55:invalid};</property>
+                  name="ParameterMap">#{Package\Cargar FactVentas\209:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1101,7 +1101,7 @@ where [refTable].[ProductoID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup Producto.Connections[OleDbConnection]"
+                  refId="Package\Cargar FactVentas\Lookup Producto.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   connectionManagerRefId="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   description="Connection manager used to access lookup data."
@@ -1109,14 +1109,14 @@ where [refTable].[ProductoID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup Producto.Inputs[Lookup Input]"
+                  refId="Package\Cargar FactVentas\Lookup Producto.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup Producto.Inputs[Lookup Input].Columns[ProductID]"
+                      refId="Package\Cargar FactVentas\Lookup Producto.Inputs[Lookup Input].Columns[ProductID]"
                       cachedDataType="i4"
                       cachedName="ProductID"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ProductID]">
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[ProductID]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1134,18 +1134,18 @@ where [refTable].[ProductoID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Producto.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Producto.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]"
+                      refId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Match Output].Columns[ProductoKey]"
                       name="ProductoKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1159,30 +1159,30 @@ where [refTable].[ProductoID] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup No Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Producto.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Producto.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Error Output]"
+                  refId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Producto.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Producto.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1191,7 +1191,7 @@ where [refTable].[ProductoID] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup Promocion"
+              refId="Package\Cargar FactVentas\Lookup Promocion"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -1247,7 +1247,7 @@ where [refTable].[CodigoPromocion] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\203:invalid};</property>
+                  name="ParameterMap">#{Package\Cargar FactVentas\210:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1259,7 +1259,7 @@ where [refTable].[CodigoPromocion] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup Promocion.Connections[OleDbConnection]"
+                  refId="Package\Cargar FactVentas\Lookup Promocion.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   connectionManagerRefId="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys1]"
                   description="Connection manager used to access lookup data."
@@ -1267,15 +1267,15 @@ where [refTable].[CodigoPromocion] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup Promocion.Inputs[Lookup Input]"
+                  refId="Package\Cargar FactVentas\Lookup Promocion.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup Promocion.Inputs[Lookup Input].Columns[promo]"
+                      refId="Package\Cargar FactVentas\Lookup Promocion.Inputs[Lookup Input].Columns[promo]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="promo"
-                      lineageId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output].Columns[promo]">
+                      lineageId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output].Columns[promo]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1293,18 +1293,18 @@ where [refTable].[CodigoPromocion] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Promocion.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Promocion.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Match Output].Columns[PromocionKey]"
+                      refId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Match Output].Columns[PromocionKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Match Output].Columns[PromocionKey]"
+                      lineageId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Match Output].Columns[PromocionKey]"
                       name="PromocionKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1318,30 +1318,30 @@ where [refTable].[CodigoPromocion] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup No Match Output]"
+                  refId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Promocion.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Promocion.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Error Output]"
+                  refId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup Promocion.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Cargar FactVentas\Lookup Promocion.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1352,35 +1352,35 @@ where [refTable].[CodigoPromocion] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[ADO NET Source Output]"
-              endId="Package\Data Flow Task\Lookup Estado.Inputs[Lookup Input]"
+              refId="Package\Cargar FactVentas.Paths[ADO NET Source Output]"
+              endId="Package\Cargar FactVentas\Lookup Estado.Inputs[Lookup Input]"
               name="ADO NET Source Output"
-              startId="Package\Data Flow Task\Leer FactVentas.Outputs[ADO NET Source Output]" />
+              startId="Package\Cargar FactVentas\Leer FactVentas.Outputs[ADO NET Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Lookup Producto.Inputs[Lookup Input]"
+              refId="Package\Cargar FactVentas.Paths[Lookup Match Output]"
+              endId="Package\Cargar FactVentas\Lookup Producto.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup Estado.Outputs[Lookup Match Output]" />
+              startId="Package\Cargar FactVentas\Lookup Estado.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
-              endId="Package\Data Flow Task\Lookup Promocion.Inputs[Lookup Input]"
+              refId="Package\Cargar FactVentas.Paths[Lookup Match Output1]"
+              endId="Package\Cargar FactVentas\Lookup Promocion.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup Producto.Outputs[Lookup Match Output]" />
+              startId="Package\Cargar FactVentas\Lookup Producto.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output2]"
-              endId="Package\Data Flow Task\Lookup FechaOrden.Inputs[Lookup Input]"
+              refId="Package\Cargar FactVentas.Paths[Lookup Match Output2]"
+              endId="Package\Cargar FactVentas\Lookup FechaOrden.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup Promocion.Outputs[Lookup Match Output]" />
+              startId="Package\Cargar FactVentas\Lookup Promocion.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output3]"
-              endId="Package\Data Flow Task\Lookup FechaEnvio.Inputs[Lookup Input]"
+              refId="Package\Cargar FactVentas.Paths[Lookup Match Output3]"
+              endId="Package\Cargar FactVentas\Lookup FechaEnvio.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup FechaOrden.Outputs[Lookup Match Output]" />
+              startId="Package\Cargar FactVentas\Lookup FechaOrden.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output4]"
-              endId="Package\Data Flow Task\Cargar FactVentas.Inputs[ADO NET Destination Input]"
+              refId="Package\Cargar FactVentas.Paths[Lookup Match Output4]"
+              endId="Package\Cargar FactVentas\Cargar FactVentas.Inputs[ADO NET Destination Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup FechaEnvio.Outputs[Lookup Match Output]" />
+              startId="Package\Cargar FactVentas\Lookup FechaEnvio.Outputs[Lookup Match Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1399,143 +1399,47 @@ where [refTable].[CodigoPromocion] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
+          Size="171,42"
+          Id="Package\Cargar FactVentas"
           TopLeft="602.5,248.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Cargar FactVentas">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="160,42"
-          Id="Package\Data Flow Task\Leer FactVentas"
+          Id="Package\Cargar FactVentas\Leer FactVentas"
           TopLeft="25.5,40.5" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\Cargar FactVentas"
-          TopLeft="1034.5,362.5" />
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Data Flow Task\Lookup Estado"
-          TopLeft="138,169" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
-          TopLeft="105.5,82.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="108.5,86.5"
-              Start="0,0"
-              End="108.5,79">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.25"
-                    Point2="0,43.25"
-                    Point3="4,43.25" />
-                  <mssgle:LineSegment
-                    End="104.5,43.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="104.5,43.25"
-                    Point2="108.5,43.25"
-                    Point3="108.5,47.25" />
-                  <mssgle:LineSegment
-                    End="108.5,79" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="176,42"
+          Id="Package\Cargar FactVentas\Lookup FechaEnvio"
+          TopLeft="710.5,214.5" />
         <NodeLayout
           Size="162,42"
-          Id="Package\Data Flow Task\Lookup Producto"
+          Id="Package\Cargar FactVentas\Lookup Producto"
           TopLeft="256.5,279.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="214,211">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="123.5,68.5"
-              Start="0,0"
-              End="123.5,61">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.25"
-                    Point2="0,34.25"
-                    Point3="4,34.25" />
-                  <mssgle:LineSegment
-                    End="119.5,34.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="119.5,34.25"
-                    Point2="123.5,34.25"
-                    Point3="123.5,38.25" />
-                  <mssgle:LineSegment
-                    End="123.5,61" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="13.55861328125,39.25,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\Lookup Promocion"
-          TopLeft="379.5,342.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="418.5,300.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="46.5,42"
-              Start="0,0"
-              End="46.5,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="42.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="42.5,0"
-                    Point2="46.5,0"
-                    Point3="46.5,4" />
-                  <mssgle:LineSegment
-                    End="46.5,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-1.69138671875,-17.609375,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="152,42"
+          Id="Package\Cargar FactVentas\Lookup Estado"
+          TopLeft="138,169" />
         <NodeLayout
           Size="179,42"
-          Id="Package\Data Flow Task\Lookup FechaOrden"
+          Id="Package\Cargar FactVentas\Lookup FechaOrden"
           TopLeft="510.5,483.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Cargar FactVentas\Lookup Promocion"
+          TopLeft="379.5,342.5" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Cargar FactVentas\Cargar FactVentas"
+          TopLeft="1034.5,362.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
+          Id="Package\Cargar FactVentas.Paths[Lookup Match Output2]"
           TopLeft="465,384.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1570,48 +1474,110 @@ where [refTable].[CodigoPromocion] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task\Lookup FechaEnvio"
-          TopLeft="710.5,214.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
-          TopLeft="628.5,483.5">
+          Id="Package\Cargar FactVentas.Paths[Lookup Match Output1]"
+          TopLeft="418.5,300.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="142,-227"
+              EndConnector="46.5,42"
               Start="0,0"
-              End="142,-219.5">
+              End="46.5,34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-109.478860122928" />
+                    End="42.5,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-109.478860122928"
-                    Point2="0,-113.478860122928"
-                    Point3="4,-113.478860122928" />
+                    Point1="42.5,0"
+                    Point2="46.5,0"
+                    Point3="46.5,4" />
                   <mssgle:LineSegment
-                    End="138,-113.478860122928" />
-                  <mssgle:CubicBezierSegment
-                    Point1="138,-113.478860122928"
-                    Point2="142,-113.478860122928"
-                    Point3="142,-117.478860122928" />
-                  <mssgle:LineSegment
-                    End="142,-219.5" />
+                    End="46.5,34.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="22.80861328125,-108.478860122928,96.3827734375,11.609375"
+              BoundingBox="-1.69138671875,-17.609375,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output4]"
+          Id="Package\Cargar FactVentas.Paths[Lookup Match Output]"
+          TopLeft="214,211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.5,68.5"
+              Start="0,0"
+              End="123.5,61">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.25"
+                    Point2="0,34.25"
+                    Point3="4,34.25" />
+                  <mssgle:LineSegment
+                    End="119.5,34.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.5,34.25"
+                    Point2="123.5,34.25"
+                    Point3="123.5,38.25" />
+                  <mssgle:LineSegment
+                    End="123.5,61" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="13.55861328125,39.25,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FactVentas.Paths[ADO NET Source Output]"
+          TopLeft="105.5,82.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.5,86.5"
+              Start="0,0"
+              End="108.5,79">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.25"
+                    Point2="0,43.25"
+                    Point3="4,43.25" />
+                  <mssgle:LineSegment
+                    End="104.5,43.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.5,43.25"
+                    Point2="108.5,43.25"
+                    Point3="108.5,47.25" />
+                  <mssgle:LineSegment
+                    End="108.5,79" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FactVentas.Paths[Lookup Match Output4]"
           TopLeft="826.5,256.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1646,11 +1612,47 @@ where [refTable].[CodigoPromocion] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar FactVentas.Paths[Lookup Match Output3]"
+          TopLeft="628.5,483.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="142,-227"
+              Start="0,0"
+              End="142,-219.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-109.478860122928" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-109.478860122928"
+                    Point2="0,-113.478860122928"
+                    Point3="4,-113.478860122928" />
+                  <mssgle:LineSegment
+                    End="138,-113.478860122928" />
+                  <mssgle:CubicBezierSegment
+                    Point1="138,-113.478860122928"
+                    Point2="142,-113.478860122928"
+                    Point3="142,-117.478860122928" />
+                  <mssgle:LineSegment
+                    End="142,-219.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.80861328125,-108.478860122928,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Leer FactVentas">
+    design-time-name="Package\Cargar FactVentas\Leer FactVentas">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1658,30 +1660,22 @@ where [refTable].[CodigoPromocion] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Cargar FactVentas">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup Estado">
+    design-time-name="Package\Cargar FactVentas\Lookup FechaEnvio">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimEstado]</Value>
+          type="q3:string">[dbo].[DimTiempo]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1689,12 +1683,12 @@ where [refTable].[CodigoPromocion] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup Producto">
+    design-time-name="Package\Cargar FactVentas\Lookup Producto">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1704,7 +1698,7 @@ where [refTable].[CodigoPromocion] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1712,12 +1706,58 @@ where [refTable].[CodigoPromocion] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup Promocion">
+    design-time-name="Package\Cargar FactVentas\Lookup Estado">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimEstado]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar FactVentas\Lookup FechaOrden">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTiempo]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar FactVentas\Lookup Promocion">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1727,7 +1767,7 @@ where [refTable].[CodigoPromocion] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1735,46 +1775,8 @@ where [refTable].[CodigoPromocion] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup FechaOrden">
+    design-time-name="Package\Cargar FactVentas\Cargar FactVentas">
     <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTiempo]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup FechaEnvio">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTiempo]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

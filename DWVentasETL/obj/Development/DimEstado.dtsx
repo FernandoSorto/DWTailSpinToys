@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimEstado"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{D9C095C1-7845-4B23-8B7B-2B738390CF97}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{82EA8F1C-285E-48BA-AED4-82E6F3D6A57C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -53,7 +53,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DEC32E32-0AEC-4396-A52C-468210417B38}"
-          SQLTask:SqlStatementSource="DELETE FROM DimEstado" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM DimEstado;&#xA;&#xA;DBCC CHECKIDENT(DimEstado, RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -408,13 +408,13 @@ FROM State s
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="166,42"
-          Id="Package\Llenar DimEstado"
-          TopLeft="445.5,228.5" />
-        <NodeLayout
           Size="172,42"
           Id="Package\Limpiar DimEstado"
           TopLeft="178.5,100.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Llenar DimEstado"
+          TopLeft="445.5,228.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="264.5,142.5">

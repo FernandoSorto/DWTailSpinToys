@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimProducto"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{1F0D3EB1-4649-44CB-8656-ED5966106867}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{05A94261-9381-491C-A880-29A91D6A016F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -53,7 +53,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6160DB3E-CFCB-4993-8517-129D79FA0817}"
-          SQLTask:SqlStatementSource="DELETE FROM DimProducto" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM DimProducto;&#xA;&#xA;DBCC CHECKIDENT(DimProducto, RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable

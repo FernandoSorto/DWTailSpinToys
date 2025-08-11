@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimPromocion"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{51F0007F-69E8-4850-B798-681ED674B1A9}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{5449FA06-3EBA-4582-9344-572A42FF9481}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -277,7 +277,7 @@ WHERE PromotionCode IS NOT NULL;</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E1540809-65DF-4E06-B07D-71EDA0F2D6CF}"
-          SQLTask:SqlStatementSource="DELETE FROM DimPromocion" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM DimPromocion;&#xA;&#xA;DBCC CHECKIDENT(DimPromocion, RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -304,13 +304,13 @@ WHERE PromotionCode IS NOT NULL;</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="190,42"
-          Id="Package\Limpiar DimPromocion"
-          TopLeft="343,144" />
-        <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
           TopLeft="614,341" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Limpiar DimPromocion"
+          TopLeft="343,144" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="438,186">
@@ -399,7 +399,7 @@ WHERE PromotionCode IS NOT NULL;</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lectura DimPromocion">
+    design-time-name="Package\Data Flow Task\Escritura DimPromocion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -407,7 +407,7 @@ WHERE PromotionCode IS NOT NULL;</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Escritura DimPromocion">
+    design-time-name="Package\Data Flow Task\Lectura DimPromocion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
