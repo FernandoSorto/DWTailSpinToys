@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\dimTiempoLoad.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:dimTiempoLoad.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimTiempo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimTiempo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimEstado.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimEstado.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,16 +18,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DimEstado.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimEstado.dtsx",
+              "RelativeDocumentMoniker": "DimEstado.dtsx",
+              "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimEstado.dtsx [Design]",
+              "RelativeToolTip": "DimEstado.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-11T03:21:11.554Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dimTiempoLoad.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\dimTiempoLoad.dtsx",
-              "RelativeDocumentMoniker": "dimTiempoLoad.dtsx",
-              "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\dimTiempoLoad.dtsx [Design]",
-              "RelativeToolTip": "dimTiempoLoad.dtsx [Design]",
+              "Title": "DimTiempo.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimTiempo.dtsx",
+              "RelativeDocumentMoniker": "DimTiempo.dtsx",
+              "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimTiempo.dtsx [Design]",
+              "RelativeToolTip": "DimTiempo.dtsx [Design]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
               "WhenOpened": "2025-08-11T00:01:01.131Z",
               "EditorCaption": " [Design]"

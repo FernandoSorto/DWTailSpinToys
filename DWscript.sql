@@ -28,27 +28,27 @@ GO
 -- Creacion de DimTiempo
 CREATE TABLE DimTiempo
 (
-	TiempoKey	INT PRIMARY KEY, --Llave surrogada
-	Fecha		DATETIME NOT NULL,
-	Dia		TINYINT NOT NULL,
-	Mes		TINYINT NOT NULL,
-	Anio		SMALLINT NOT NULL
+	TiempoKey		INT PRIMARY KEY, --Llave surrogada
+	Fecha			DATETIME NOT NULL,
+	Dia				TINYINT NOT NULL,
+	Mes				TINYINT NOT NULL,
+	Anio			SMALLINT NOT NULL
 )
 GO
 
 -- Creacion de DimProducto
 CREATE TABLE DimProducto
 (
-	ProductoKey	INT PRIMARY KEY IDENTITY(1,1), --Llave surrogada
-	ProductID	INT NOT NULL, --Llave de negocio
-	ProductoSKU	VARCHAR(25) NOT NULL,
-	Nombre		VARCHAR(50) NOT NULL,
-	Categoria	VARCHAR(50)NOT NULL,
-	GrupoItem	VARCHAR(50) NOT NULL,
-	Demografica	VARCHAR(50) NOT NULL,
-	Precio		FLOAT NOT NULL DEFAULT(0),
-	TipoKit		CHAR(3) NOT NULL,
-	Canales		TINYINT NOT NULL
+	ProductoKey		INT PRIMARY KEY IDENTITY(1,1), --Llave surrogada
+	ProductID		INT NOT NULL, --Llave de negocio
+	ProductoSKU		VARCHAR(25) NOT NULL,
+	Nombre			VARCHAR(50) NOT NULL,
+	Categoria		VARCHAR(50)NOT NULL,
+	GrupoItem		VARCHAR(50) NOT NULL,
+	Demografica		VARCHAR(50) NOT NULL,
+	Precio			FLOAT NOT NULL DEFAULT(0),
+	TipoKit			CHAR(3) NOT NULL,
+	Canales			TINYINT NOT NULL
 )
 GO
 
@@ -56,23 +56,23 @@ GO
 CREATE TABLE DimEstado
 (
 	EstadoKey		INT PRIMARY KEY IDENTITY(1,1), --Llave surrogada
-	RegionID		INT NOT NULL, -- Llave de negocio
+	EstadoID		INT NOT NULL, -- Llave de negocio
 	Nombre			VARCHAR(50) NOT NULL,
-	NombreRegion 		VARCHAR(50) NOT NULL,
-	ZonaHoraria		CHAR(3) NOT NULL,
+	NombreRegion 	VARCHAR(50) NOT NULL,
+	ZonaHoraria		VARCHAR(30) NOT NULL,
 )
 GO
 
 -- Creacion de FactVentas
 CREATE TABLE FactVentas
 (
-	EstadoKey 	INT NOT NULL FOREIGN KEY REFERENCES DimEstado(EstadoKey),
+	EstadoKey 		INT NOT NULL FOREIGN KEY REFERENCES DimEstado(EstadoKey),
 	ProductoKey 	INT NOT NULL FOREIGN KEY REFERENCES DimProducto(ProductoKey),
 	FechaOrdenKey 	INT NOT NULL FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
 	FechaEnvioKey 	INT NOT NULL FOREIGN KEY REFERENCES DimTiempo(TiempoKey),
-	Cantidad 	INT NOT NULL,
+	Cantidad 		INT NOT NULL,
 	PrecioUnitario 	FLOAT NOT NULL,
-	Descuento 	FLOAT NOT NULL,
+	Descuento 		FLOAT NOT NULL,
 	NumeroOrden 	VARCHAR(20) NOT NULL,
 	CodigoPromocion VARCHAR(20) NOT NULL,
 )

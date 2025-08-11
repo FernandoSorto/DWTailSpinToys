@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>DWVentasETL</Name>
-    <LastWriteTime>2025-08-11T02:51:45.4870299Z</LastWriteTime>
+    <LastWriteTime>2025-08-11T03:41:44.4112873Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>dimTiempoLoad.dtsx</Name>
-      <LastWriteTime>2025-08-11T02:50:36.4616015Z</LastWriteTime>
+      <Name>DimEstado.dtsx</Name>
+      <LastWriteTime>2025-08-11T03:40:00.6879334Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DimTiempo.dtsx</Name>
+      <LastWriteTime>2025-08-11T03:39:58.1032687Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

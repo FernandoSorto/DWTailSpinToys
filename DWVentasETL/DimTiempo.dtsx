@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LUFESO"
   DTS:CreatorName="LUFESO\lufes"
-  DTS:DTSID="{3FF2C0DF-A3E5-40A3-BE14-8230AE068181}"
+  DTS:DTSID="{EE1EED04-B89D-47EB-95EA-69859FF7B773}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.2"
   DTS:LocaleID="1033"
-  DTS:ObjectName="dimTiempoLoad"
+  DTS:ObjectName="DimTiempo"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{16335B91-6C2E-4F7B-8A1E-65692A99E89B}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{C414BA21-3F5E-4624-B585-96B7E68AD92E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
