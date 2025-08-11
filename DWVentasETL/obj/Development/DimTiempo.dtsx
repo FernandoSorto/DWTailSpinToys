@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimTiempo"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{C414BA21-3F5E-4624-B585-96B7E68AD92E}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{D5D91B69-1C77-44C0-B477-0BF03C3AF513}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -90,13 +90,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Carga CSV dimTiempo"
+      DTS:refId="Package\Carga CSV DimTiempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{B8FB62F2-AC36-496D-B42B-038DCDD1B686}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Carga CSV dimTiempo"
+      DTS:ObjectName="Carga CSV DimTiempo"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -104,11 +104,196 @@
           version="1">
           <components>
             <component
-              refId="Package\Carga CSV dimTiempo\ADO NET Destination"
+              refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Leer CSV DimTiempo"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Lectura csv dimTiempo]"
+                  connectionManagerRefId="Package.ConnectionManagers[Lectura csv dimTiempo]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[TiempoKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[TiempoKey]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[TiempoKey]"
+                      name="TiempoKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Fecha]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[Fecha]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Fecha]"
+                      name="Fecha"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Mes]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[Mes]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Mes]"
+                      name="Mes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Dia]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[Dia]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Dia]"
+                      name="Dia"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Anio]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[Anio]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Anio]"
+                      name="Anio"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[TiempoKey]"
+                      dataType="i4"
+                      name="TiempoKey" />
+                    <externalMetadataColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[Fecha]"
+                      dataType="dbTimeStamp"
+                      name="Fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[Mes]"
+                      dataType="ui1"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[Dia]"
+                      dataType="ui1"
+                      name="Dia" />
+                    <externalMetadataColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].ExternalColumns[Anio]"
+                      dataType="i2"
+                      name="Anio" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Carga CSV DimTiempo\Llenar DimTiempo"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
-              name="ADO NET Destination"
+              name="Llenar DimTiempo"
               usesDispositions="true"
               version="2">
               <properties>
@@ -139,7 +324,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Carga CSV dimTiempo\ADO NET Destination.Connections[IDbConnection]"
+                  refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys]"
                   connectionManagerRefId="Package.ConnectionManagers[LUFESO.DWVentasTailspinToys]"
                   description="Managed connection manager"
@@ -147,62 +332,62 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="ADO NET Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[TiempoKey]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].Columns[TiempoKey]"
                       cachedDataType="i4"
                       cachedName="TiempoKey"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TiempoKey]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[TiempoKey]" />
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[TiempoKey]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[TiempoKey]" />
                     <inputColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Fecha]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].Columns[Fecha]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Fecha"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Fecha]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Fecha]" />
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[Fecha]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Fecha]" />
                     <inputColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Mes]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].Columns[Mes]"
                       cachedDataType="ui1"
                       cachedName="Mes"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Mes]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Mes]" />
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[Mes]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Mes]" />
                     <inputColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Dia]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].Columns[Dia]"
                       cachedDataType="ui1"
                       cachedName="Dia"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Dia]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Dia]" />
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[Dia]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Dia]" />
                     <inputColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[Anio]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].Columns[Anio]"
                       cachedDataType="i2"
                       cachedName="Anio"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Anio]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Anio]" />
+                      externalMetadataColumnId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[Anio]"
+                      lineageId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output].Columns[Anio]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[TiempoKey]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[TiempoKey]"
                       dataType="i4"
                       name="TiempoKey" />
                     <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Fecha]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[Fecha]"
                       dataType="dbTimeStamp"
                       name="Fecha" />
                     <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Dia]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[Dia]"
                       dataType="ui1"
                       name="Dia" />
                     <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Mes]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[Mes]"
                       dataType="ui1"
                       name="Mes" />
                     <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[Anio]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input].ExternalColumns[Anio]"
                       dataType="i2"
                       name="Anio" />
                   </externalMetadataColumns>
@@ -210,207 +395,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Carga CSV dimTiempo\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Outputs[ADO NET Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="ADO NET Destination Error Output"
-                  synchronousInputId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  synchronousInputId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Carga CSV dimTiempo\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Carga CSV dimTiempo\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Carga CSV dimTiempo\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Carga CSV dimTiempo\CSV dimTiempo"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
-              name="CSV dimTiempo"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Lectura csv dimTiempo]"
-                  connectionManagerRefId="Package.ConnectionManagers[Lectura csv dimTiempo]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[TiempoKey]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[TiempoKey]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[TiempoKey]"
-                      name="TiempoKey"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Fecha]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[Fecha]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Fecha]"
-                      name="Fecha"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Mes]"
-                      dataType="ui1"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[Mes]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Mes]"
-                      name="Mes"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Dia]"
-                      dataType="ui1"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[Dia]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Dia]"
-                      name="Dia"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Anio]"
-                      dataType="i2"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[Anio]"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].Columns[Anio]"
-                      name="Anio"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[TiempoKey]"
-                      dataType="i4"
-                      name="TiempoKey" />
-                    <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[Fecha]"
-                      dataType="dbTimeStamp"
-                      name="Fecha" />
-                    <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[Mes]"
-                      dataType="ui1"
-                      name="Mes" />
-                    <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[Dia]"
-                      dataType="ui1"
-                      name="Dia" />
-                    <externalMetadataColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output].ExternalColumns[Anio]"
-                      dataType="i2"
-                      name="Anio" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -421,15 +421,42 @@
           </components>
           <paths>
             <path
-              refId="Package\Carga CSV dimTiempo.Paths[Flat File Source Output]"
-              endId="Package\Carga CSV dimTiempo\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              refId="Package\Carga CSV DimTiempo.Paths[Flat File Source Output]"
+              endId="Package\Carga CSV DimTiempo\Llenar DimTiempo.Inputs[ADO NET Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Carga CSV dimTiempo\CSV dimTiempo.Outputs[Flat File Source Output]" />
+              startId="Package\Carga CSV DimTiempo\Leer CSV DimTiempo.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Limpiar DimTiempo"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{837772EB-51F1-44BB-ADF4-70C85EB67F56}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Limpiar DimTiempo"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{340BCC8D-AB3C-4140-9482-628DAABC1AE6}"
+          SQLTask:SqlStatementSource="DELETE DimTiempo" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{DFAA136B-D56B-4667-84F8-85F000C71243}"
+      DTS:From="Package\Limpiar DimTiempo"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Carga CSV DimTiempo" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -441,36 +468,74 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="192,42"
-          Id="Package\Carga CSV dimTiempo"
-          TopLeft="58.5,76.5" />
+          Size="194,42"
+          Id="Package\Carga CSV DimTiempo"
+          TopLeft="329.5,233.5" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Limpiar DimTiempo"
+          TopLeft="115.5,70.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="202.5,112.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="224,121"
+              Start="0,0"
+              End="224,113.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.5"
+                    Point2="0,60.5"
+                    Point3="4,60.5" />
+                  <mssgle:LineSegment
+                    End="220,60.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="220,60.5"
+                    Point2="224,60.5"
+                    Point3="224,64.5" />
+                  <mssgle:LineSegment
+                    End="224,113.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Carga CSV dimTiempo">
+    design-time-name="Package\Carga CSV DimTiempo">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="159,42"
-          Id="Package\Carga CSV dimTiempo\CSV dimTiempo"
+          Size="186,42"
+          Id="Package\Carga CSV DimTiempo\Leer CSV DimTiempo"
           TopLeft="212,139" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Carga CSV dimTiempo\ADO NET Destination"
+          Size="169,42"
+          Id="Package\Carga CSV DimTiempo\Llenar DimTiempo"
           TopLeft="613.5,371.5" />
         <EdgeLayout
-          Id="Package\Carga CSV dimTiempo.Paths[Flat File Source Output]"
-          TopLeft="291.5,181">
+          Id="Package\Carga CSV DimTiempo.Paths[Flat File Source Output]"
+          TopLeft="305,181">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="415,190.5"
+              EndConnector="393,190.5"
               Start="0,0"
-              End="415,183">
+              End="393,183">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -481,13 +546,13 @@
                     Point2="0,95.25"
                     Point3="4,95.25" />
                   <mssgle:LineSegment
-                    End="411,95.25" />
+                    End="389,95.25" />
                   <mssgle:CubicBezierSegment
-                    Point1="411,95.25"
-                    Point2="415,95.25"
-                    Point3="415,99.25" />
+                    Point1="389,95.25"
+                    Point2="393,95.25"
+                    Point3="393,99.25" />
                   <mssgle:LineSegment
-                    End="415,183" />
+                    End="393,183" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -500,7 +565,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga CSV dimTiempo\ADO NET Destination">
+    design-time-name="Package\Carga CSV DimTiempo\Llenar DimTiempo">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

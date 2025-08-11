@@ -40,14 +40,14 @@ GO
 CREATE TABLE DimProducto
 (
 	ProductoKey		INT PRIMARY KEY IDENTITY(1,1), --Llave surrogada
-	ProductID		INT NOT NULL, --Llave de negocio
-	ProductoSKU		VARCHAR(25) NOT NULL,
+	ProductoID		INT NOT NULL, --Llave de negocio
+	ProductoSKU		VARCHAR(50) NOT NULL,
 	Nombre			VARCHAR(50) NOT NULL,
 	Categoria		VARCHAR(50)NOT NULL,
-	GrupoItem		VARCHAR(50) NOT NULL,
+	Grupo			VARCHAR(50) NOT NULL,
 	Demografica		VARCHAR(50) NOT NULL,
 	Precio			FLOAT NOT NULL DEFAULT(0),
-	TipoKit			CHAR(3) NOT NULL,
+	TipoKit			VARCHAR(20) NOT NULL,
 	Canales			TINYINT NOT NULL
 )
 GO
