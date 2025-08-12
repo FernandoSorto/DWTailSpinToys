@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimEstado"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{3E187A2B-F9E2-41F6-B256-3F96B4AA6528}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{60B5458D-CB9F-46CC-A7D1-44A148005F27}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -272,7 +272,7 @@
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimEstado]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimEstado]  where Activo =1 ) [refTable]
 where [refTable].[EstadoID] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -283,7 +283,7 @@ where [refTable].[EstadoID] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the cache type of the lookup table."
                   name="CacheType"
-                  typeConverter="CacheType">0</property>
+                  typeConverter="CacheType">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
@@ -968,33 +968,33 @@ FROM State s
         <NodeLayout
           Size="113,42"
           Id="Package\Llenar DimEstado\Buscar"
-          TopLeft="575,230" />
+          TopLeft="574,229" />
         <EdgeLayout
           Id="Package\Llenar DimEstado.Paths[ADO NET Source Output]"
           TopLeft="665.5,140">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-34,90"
+              EndConnector="-35,89"
               Start="0,0"
-              End="-34,82.5">
+              End="-35,81.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41" />
+                    End="0,40.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41"
-                    Point2="0,45"
-                    Point3="-4,45" />
+                    Point1="0,40.5"
+                    Point2="0,44.5"
+                    Point3="-4,44.5" />
                   <mssgle:LineSegment
-                    End="-30,45" />
+                    End="-31,44.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="-30,45"
-                    Point2="-34,45"
-                    Point3="-34,49" />
+                    Point1="-31,44.5"
+                    Point2="-35,44.5"
+                    Point3="-35,48.5" />
                   <mssgle:LineSegment
-                    End="-34,82.5" />
+                    End="-35,81.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1005,37 +1005,37 @@ FROM State s
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Llenar DimEstado.Paths[Lookup No Match Output]"
-          TopLeft="614,272">
+          TopLeft="630.5,271">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-248.5,168.5"
+              EndConnector="-265,169.5"
               Start="0,0"
-              End="-248.5,161">
+              End="-265,162">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,64.8115183246073" />
+                    End="0,80.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,64.8115183246073"
-                    Point2="0,68.8115183246073"
-                    Point3="-4,68.8115183246073" />
+                    Point1="0,80.75"
+                    Point2="0,84.75"
+                    Point3="-4,84.75" />
                   <mssgle:LineSegment
-                    End="-244.5,68.8115183246073" />
+                    End="-261,84.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="-244.5,68.8115183246073"
-                    Point2="-248.5,68.8115183246073"
-                    Point3="-248.5,72.8115183246073" />
+                    Point1="-261,84.75"
+                    Point2="-265,84.75"
+                    Point3="-265,88.75" />
                   <mssgle:LineSegment
-                    End="-248.5,161" />
+                    End="-265,162" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-180.05638671875,73.8115183246073,111.6127734375,11.609375"
+              BoundingBox="-188.30638671875,89.75,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1049,37 +1049,37 @@ FROM State s
           TopLeft="850.5,282.5" />
         <EdgeLayout
           Id="Package\Llenar DimEstado.Paths[Lookup Match Output]"
-          TopLeft="688,251">
+          TopLeft="687,250">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="162.5,52.5"
+              EndConnector="163.5,53.5"
               Start="0,0"
-              End="155,52.5">
+              End="156,53.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="77.25,0" />
+                    End="77.75,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="77.25,0"
-                    Point2="81.25,0"
-                    Point3="81.25,4" />
+                    Point1="77.75,0"
+                    Point2="81.75,0"
+                    Point3="81.75,4" />
                   <mssgle:LineSegment
-                    End="81.25,48.5" />
+                    End="81.75,49.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="81.25,48.5"
-                    Point2="81.25,52.5"
-                    Point3="85.25,52.5" />
+                    Point1="81.75,49.5"
+                    Point2="81.75,53.5"
+                    Point3="85.75,53.5" />
                   <mssgle:LineSegment
-                    End="155,52.5" />
+                    End="156,53.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="33.05861328125,-17.609375,96.3827734375,11.609375"
+              BoundingBox="33.55861328125,-17.609375,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1129,20 +1129,12 @@ FROM State s
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar DimEstado\Cargar Nuevos DimEstado">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Llenar DimEstado\Buscar">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">true</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1152,8 +1144,16 @@ FROM State s
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar DimEstado\Cargar Nuevos DimEstado">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

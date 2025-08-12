@@ -129,7 +129,7 @@ BEGIN
 		@ZonaHorariaActual<>@ZonaHoraria
 	)
 	BEGIN
-		UPDATE DimEstado SET Activo=0 WHERE EstadoKey = @EstadoKey
+		UPDATE DimEstado SET Activo=0, FechaFin=getdate() WHERE EstadoKey = @EstadoKey
 
 		INSERT INTO DimEstado
 		(
@@ -202,7 +202,7 @@ BEGIN
 		@CanalesActual<>@Canales
 	)
 	BEGIN
-		UPDATE DimProducto SET Activo=0 WHERE ProductoKey = @ProductoKey
+		UPDATE DimProducto SET Activo=0, FechaFin=getdate() WHERE ProductoKey = @ProductoKey
 
 		INSERT INTO DimProducto
 		(

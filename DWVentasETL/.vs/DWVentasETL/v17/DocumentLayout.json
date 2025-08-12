@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\FactVentas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:FactVentas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimPromocion.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimPromocion.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimProducto.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimProducto.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
@@ -15,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimTiempo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimPromocion.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimPromocion.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\Orquestador.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:Orquestador.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\FactVentas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:FactVentas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "FactVentas.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\FactVentas.dtsx",
               "RelativeDocumentMoniker": "FactVentas.dtsx",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Orquestador.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\Orquestador.dtsx",
               "RelativeDocumentMoniker": "Orquestador.dtsx",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DimPromocion.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimPromocion.dtsx",
               "RelativeDocumentMoniker": "DimPromocion.dtsx",
@@ -74,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "DimTiempo.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimTiempo.dtsx",
               "RelativeDocumentMoniker": "DimTiempo.dtsx",
@@ -86,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DimEstado.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimEstado.dtsx",
               "RelativeDocumentMoniker": "DimEstado.dtsx",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DimProducto.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimProducto.dtsx",
               "RelativeDocumentMoniker": "DimProducto.dtsx",
