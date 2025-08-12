@@ -116,7 +116,8 @@ BEGIN
 	SELECT
 		@NombreActual = Nombre,
 		@NombreRegionActual = NombreRegion,
-		@ZonaHorariaActual = ZonaHoraria
+		@ZonaHorariaActual = ZonaHoraria,
+		@EstadoID = EstadoID
 	FROM 
 		DimEstado
 	WHERE

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimEstado.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimEstado.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\FactVentas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:FactVentas.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimProducto.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimProducto.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimEstado.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|solutionrelative:DimEstado.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D474AC37-6D6A-491F-B5C0-10FB3AB67B39}|DWVentasETL.dtproj|C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimTiempo.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
@@ -34,42 +34,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FactVentas.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\FactVentas.dtsx",
               "RelativeDocumentMoniker": "FactVentas.dtsx",
               "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\FactVentas.dtsx [Design]",
               "RelativeToolTip": "FactVentas.dtsx [Design]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-08-11T13:11:22.662Z",
+              "WhenOpened": "2025-08-12T04:19:03.932Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Orquestador.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\Orquestador.dtsx",
-              "RelativeDocumentMoniker": "Orquestador.dtsx",
-              "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\Orquestador.dtsx [Design]",
-              "RelativeToolTip": "Orquestador.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-08-11T13:12:14.02Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DimPromocion.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimPromocion.dtsx",
               "RelativeDocumentMoniker": "DimPromocion.dtsx",
               "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimPromocion.dtsx [Design]",
               "RelativeToolTip": "DimPromocion.dtsx [Design]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-08-11T13:11:01.85Z",
+              "WhenOpened": "2025-08-12T04:18:59.549Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DimProducto.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimProducto.dtsx",
+              "RelativeDocumentMoniker": "DimProducto.dtsx",
+              "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimProducto.dtsx [Design]",
+              "RelativeToolTip": "DimProducto.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-12T04:18:54.039Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -81,12 +81,24 @@
               "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimTiempo.dtsx [Design]",
               "RelativeToolTip": "DimTiempo.dtsx [Design]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-08-11T00:01:01.131Z",
+              "WhenOpened": "2025-08-12T04:18:39.733Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "Orquestador.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\Orquestador.dtsx",
+              "RelativeDocumentMoniker": "Orquestador.dtsx",
+              "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\Orquestador.dtsx [Design]",
+              "RelativeToolTip": "Orquestador.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-12T04:17:13.017Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "DimEstado.dtsx [Design]",
               "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimEstado.dtsx",
               "RelativeDocumentMoniker": "DimEstado.dtsx",
@@ -94,18 +106,6 @@
               "RelativeToolTip": "DimEstado.dtsx [Design]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
               "WhenOpened": "2025-08-11T03:21:11.554Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DimProducto.dtsx [Design]",
-              "DocumentMoniker": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimProducto.dtsx",
-              "RelativeDocumentMoniker": "DimProducto.dtsx",
-              "ToolTip": "C:\\Users\\lufes\\OneDrive\\Documents\\GitHub\\DWTailSpinToys\\DWVentasETL\\DimProducto.dtsx [Design]",
-              "RelativeToolTip": "DimProducto.dtsx [Design]",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-08-11T20:03:21.599Z",
               "EditorCaption": " [Design]"
             }
           ]
