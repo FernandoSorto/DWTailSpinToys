@@ -48,7 +48,10 @@ CREATE TABLE DimProducto
 	Demografica		VARCHAR(50) NOT NULL,
 	Precio			FLOAT NOT NULL DEFAULT(0),
 	TipoKit			VARCHAR(20) NOT NULL,
-	Canales			TINYINT NOT NULL
+	Canales			TINYINT NOT NULL,
+	Activo 			BIT NOT NULL DEFAULT 1,
+	FechaInicio 	DATETIME NOT NULL DEFAULT GETDATE(),
+	FechaFin 		DATETIME NULL
 )
 GO
 
@@ -60,6 +63,9 @@ CREATE TABLE DimEstado
 	Nombre			VARCHAR(50) NOT NULL,
 	NombreRegion 	VARCHAR(50) NOT NULL,
 	ZonaHoraria		VARCHAR(30) NOT NULL,
+	Activo 			BIT NOT NULL DEFAULT 1,
+	FechaInicio 	DATETIME NOT NULL DEFAULT GETDATE(),
+	FechaFin 		DATETIME NULL
 )
 GO
 
@@ -83,4 +89,142 @@ CREATE TABLE FactVentas
 	TotalLinea				FLOAT NOT NULL,
 	NumeroOrden 			VARCHAR(20) NOT NULL,
 )
+GO
+
+
+/*
+/	=========================================
+/	CREACION DE PROCESOS ALMACENADOS PARA ETL
+/	=========================================
+*/
+
+
+CREATE OR ALTER PROCEDURE ActualizarEstado
+(
+	@EstadoKey		INT,
+	@EstadoID		INT,
+	@Nombre			VARCHAR(50),
+	@NombreRegion	VARCHAR(50),
+	@ZonaHoraria	VARCHAR(30)
+) AS
+BEGIN
+	DECLARE
+		@NombreActual		VARCHAR(100),
+		@NombreRegionActual VARCHAR(100),
+		@ZonaHorariaActual	VARCHAR(100);
+
+	SELECT
+		@NombreActual = Nombre,
+		@NombreRegionActual = NombreRegion,
+		@ZonaHorariaActual = ZonaHoraria
+	FROM 
+		DimEstado
+	WHERE
+		EstadoKey = @EstadoKey
+
+	IF 
+	(
+		@NombreActual<>@Nombre OR
+		@NombreRegionActual<>@NombreRegion OR
+		@ZonaHorariaActual<>@ZonaHoraria
+	)
+	BEGIN
+		UPDATE DimEstado SET Activo=0 WHERE EstadoKey = @EstadoKey
+
+		INSERT INTO DimEstado
+		(
+			EstadoID, 
+			Nombre, 
+			NombreRegion, 
+			ZonaHoraria
+		)
+		VALUES
+		(
+			@EstadoID, 
+			@Nombre, 
+			@NombreRegion,
+			@ZonaHoraria
+		)
+	END
+END
+GO
+
+
+
+CREATE OR ALTER PROCEDURE ActualizarProducto
+(
+	@ProductoKey	INT,
+	@ProductoID		INT, 
+	@ProductoSKU	VARCHAR(50),
+	@NombreProd		VARCHAR(50),
+	@Categoria		VARCHAR(50),
+	@Grupo			VARCHAR(50),
+	@Demografica	VARCHAR(50),
+	@Precio			FLOAT,
+	@TipoKit		VARCHAR(20),
+	@Canales		TINYINT
+) AS
+BEGIN
+	DECLARE
+		@ProductoSKUActual	VARCHAR(50),
+		@NombreProdActual	VARCHAR(50),
+		@CategoriaActual	VARCHAR(50),
+		@GrupoActual		VARCHAR(50),
+		@DemograficaActual	VARCHAR(50),
+		@PrecioActual		FLOAT,
+		@TipoKitActual		VARCHAR(20),
+		@CanalesActual		TINYINT;
+
+	SELECT 
+		@ProductoSKUActual=ProductoSKU,
+		@NombreProdActual=Nombre,
+		@CategoriaActual=Categoria,
+		@GrupoActual=Grupo,
+		@DemograficaActual=Demografica,
+		@PrecioActual=Precio,
+		@TipoKitActual=TipoKit,
+		@CanalesActual=Canales
+	FROM 
+		DimProducto
+	WHERE
+		ProductoKey = @ProductoKey
+
+	IF 
+	(
+		@ProductoSKUActual<>@ProductoSKU OR
+		@NombreProdActual<>@NombreProd OR
+		@CategoriaActual<>@Categoria OR
+		@GrupoActual<>@Grupo OR
+		@DemograficaActual<>@Demografica OR
+		@PrecioActual<>@Precio OR
+		@TipoKitActual<>@TipoKit OR
+		@CanalesActual<>@Canales
+	)
+	BEGIN
+		UPDATE DimProducto SET Activo=0 WHERE ProductoKey = @ProductoKey
+
+		INSERT INTO DimProducto
+		(
+			ProductoSKU,
+			Nombre,
+			Categoria,
+			Grupo,
+			Demografica,
+			Precio,
+			TipoKit,
+			Canales
+		)
+		VALUES
+		(
+			@ProductoSKU,
+			@NombreProd,
+			@Categoria,
+			@Grupo,
+			@Demografica,
+			@Precio,
+			@TipoKit,
+			@Canales
+		)
+	END
+END
 GO
