@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimProducto"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{05A94261-9381-491C-A880-29A91D6A016F}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{EAB9C1CC-9388-44B6-B9D3-A1BBF4F900AC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -500,6 +500,18 @@ FROM Product</property>
                       refId="Package\Llenar DimProducto\Llenar DimProducto.Inputs[ADO NET Destination Input].ExternalColumns[Canales]"
                       dataType="ui1"
                       name="Canales" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimProducto\Llenar DimProducto.Inputs[ADO NET Destination Input].ExternalColumns[Activo]"
+                      dataType="bool"
+                      name="Activo" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimProducto\Llenar DimProducto.Inputs[ADO NET Destination Input].ExternalColumns[FechaInicio]"
+                      dataType="dbTimeStamp"
+                      name="FechaInicio" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar DimProducto\Llenar DimProducto.Inputs[ADO NET Destination Input].ExternalColumns[FechaFin]"
+                      dataType="dbTimeStamp"
+                      name="FechaFin" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -613,13 +625,13 @@ FROM Product</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="168,42"
-          Id="Package\Llenar DimProducto\Leer DimProducto"
-          TopLeft="84.5,169.5" />
-        <NodeLayout
           Size="176,42"
           Id="Package\Llenar DimProducto\Llenar DimProducto"
           TopLeft="574.5,333.5" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Llenar DimProducto\Leer DimProducto"
+          TopLeft="84.5,169.5" />
         <EdgeLayout
           Id="Package\Llenar DimProducto.Paths[ADO NET Source Output]"
           TopLeft="168.5,211.5">

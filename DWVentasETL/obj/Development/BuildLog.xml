@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>DWVentasETL</Name>
-    <LastWriteTime>2025-08-11T22:19:30.1884905Z</LastWriteTime>
+    <LastWriteTime>2025-08-12T02:48:41.6751709Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DimEstado.dtsx</Name>
-      <LastWriteTime>2025-08-11T23:31:07.5630631Z</LastWriteTime>
+      <LastWriteTime>2025-08-12T03:13:31.5258897Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DimProducto.dtsx</Name>
-      <LastWriteTime>2025-08-11T23:29:21.3539783Z</LastWriteTime>
+      <LastWriteTime>2025-08-12T02:24:11.7816444Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -28,7 +28,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FactVentas.dtsx</Name>
-      <LastWriteTime>2025-08-11T23:16:58.0709339Z</LastWriteTime>
+      <LastWriteTime>2025-08-11T23:57:24.2743023Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>

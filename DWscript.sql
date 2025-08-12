@@ -102,7 +102,6 @@ GO
 CREATE OR ALTER PROCEDURE ActualizarEstado
 (
 	@EstadoKey		INT,
-	@EstadoID		INT,
 	@Nombre			VARCHAR(50),
 	@NombreRegion	VARCHAR(50),
 	@ZonaHoraria	VARCHAR(30)
@@ -111,7 +110,8 @@ BEGIN
 	DECLARE
 		@NombreActual		VARCHAR(100),
 		@NombreRegionActual VARCHAR(100),
-		@ZonaHorariaActual	VARCHAR(100);
+		@ZonaHorariaActual	VARCHAR(100),
+		@EstadoID 			INT;
 
 	SELECT
 		@NombreActual = Nombre,
@@ -153,8 +153,7 @@ GO
 
 CREATE OR ALTER PROCEDURE ActualizarProducto
 (
-	@ProductoKey	INT,
-	@ProductoID		INT, 
+	@ProductoKey		INT, 
 	@ProductoSKU	VARCHAR(50),
 	@NombreProd		VARCHAR(50),
 	@Categoria		VARCHAR(50),
@@ -173,7 +172,8 @@ BEGIN
 		@DemograficaActual	VARCHAR(50),
 		@PrecioActual		FLOAT,
 		@TipoKitActual		VARCHAR(20),
-		@CanalesActual		TINYINT;
+		@CanalesActual		TINYINT,
+		@ProductoID			INT;
 
 	SELECT 
 		@ProductoSKUActual=ProductoSKU,
@@ -183,7 +183,8 @@ BEGIN
 		@DemograficaActual=Demografica,
 		@PrecioActual=Precio,
 		@TipoKitActual=TipoKit,
-		@CanalesActual=Canales
+		@CanalesActual=Canales,
+		@ProductoID=ProductoID	
 	FROM 
 		DimProducto
 	WHERE
@@ -205,6 +206,7 @@ BEGIN
 
 		INSERT INTO DimProducto
 		(
+			ProductoID,
 			ProductoSKU,
 			Nombre,
 			Categoria,
@@ -216,6 +218,7 @@ BEGIN
 		)
 		VALUES
 		(
+			@ProductoID,
 			@ProductoSKU,
 			@NombreProd,
 			@Categoria,
